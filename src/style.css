@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Delius&family=Shantell+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Delius", "Shantell Sans", cursive;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgb(93 173 255);
+  padding-top: max(0.8%, 0.8rem);
+  padding-bottom: max(0.8%, 0.8rem);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: clamp(28px, 3rem, 5vw);
+  font-family: "Crafty Girls", cursive;
+}
+
+.content {
+  flex: 1 0 auto;
+  background-color: white;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 20px;
+}
+
+.rules {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: clamp(18px, 1.3rem, 2vw);
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+}
+
+.collage-container {
+  width: 1600px;
+  height: auto;
+  position: relative;
+}
+
+img {
+  width: 1600px;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.box {
+  position: absolute;
+  z-index: 5;
+  /* width: 100px;
+  height: 100px; */
+  /* width: min-content; */
+  background-color: rgb(202, 174, 174);
+  padding: 10px;
+  display: none;
+  border: rgb(255, 255, 255) 2px solid;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: outset 2px grey;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: clamp(15px, 1rem, 1.8vw);
+}
+button:hover {
+  box-shadow: 2px 2px 4px rgb(94, 94, 94);
+  font-weight: bold;
+}
+
+.scoreboard {
+  border: black 2px solid;
+  padding: 15px;
+  width: max-content;
+  height: 10rem;
+  overflow-y: scroll;
+}
+
+h3 {
+  font-size: clamp(18px, 1.5rem, 2.2vw);
+}
+
+li {
+  font-size: clamp(18px, 1.3rem, 2vw);
+  list-style-position: inside;
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  font-size: clamp(15px, 1.3rem, 2.5vw);
+  text-align: center;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: rgb(213, 236, 255);
+}
