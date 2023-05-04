@@ -33,8 +33,6 @@ h1 {
 .content {
   flex: 1 0 auto;
   background-color: white;
-  /* display: flex;
-  flex-direction: column; */
   padding: 20px;
 }
 
@@ -44,40 +42,114 @@ h1 {
   font-size: clamp(18px, 1.3rem, 2vw);
 }
 
+.squirrel {
+  background-color: rgb(83, 226, 83);
+}
+.cinnamon {
+  background-color: yellow;
+}
+
+.snake {
+  background-color: orange;
+}
+
+.laptop {
+  background-color: red;
+}
+.statue {
+  background-color: rgb(255, 99, 177);
+}
+
+.squirrel,
+.snake,
+.statue,
+.cinnamon,
+.laptop {
+  font-weight: bold;
+  text-shadow: 2px 2px 4px white;
+}
+
 .game-container {
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
 .collage-container {
   width: 1600px;
   height: auto;
   position: relative;
+  margin-bottom: 1rem;
 }
 
-img {
+.collage {
   width: 1600px;
   height: auto;
   cursor: pointer;
-  margin-bottom: 1rem;
+}
+
+.marker {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  z-index: 10;
 }
 
 .box {
   position: absolute;
   z-index: 5;
-  /* width: 100px;
-  height: 100px; */
-  /* width: min-content; */
-  background-color: rgb(202, 174, 174);
+  background-color: gold;
   padding: 10px;
   display: none;
   border: rgb(255, 255, 255) 2px solid;
   border-radius: 8px;
   flex-wrap: wrap;
   gap: 5px;
+}
+
+.win-pop-up-window {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+}
+
+.win-pop-up {
+  background-color: white;
+  padding: 20px;
+  font-size: clamp(20px, 1.3rem, 1.5vw);
+  border-radius: 8px;
+}
+
+.win-pop-up p {
+  text-align: center;
+}
+
+input {
+  font-size: clamp(16px, 1.1rem, 1.3vw);
+  padding: 2px;
+}
+
+.start-pop-up-window {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
 }
 
 button {
@@ -93,16 +165,30 @@ button:hover {
   font-weight: bold;
 }
 
-.scoreboard {
+.start-btn {
+  padding: 10px;
+  font-size: clamp(25px, 3rem, 3vw);
+}
+
+.scoreboard-container {
+  border: gold 6px solid;
+  padding: 10px;
+  width: max-content;
+  background-color: rgb(230, 45, 45);
+}
+
+ol {
   border: black 2px solid;
   padding: 15px;
   width: max-content;
-  height: 10rem;
+  height: 8rem;
   overflow-y: scroll;
+  background-color: white;
 }
 
 h3 {
   font-size: clamp(18px, 1.5rem, 2.2vw);
+  color: white;
 }
 
 li {
@@ -120,9 +206,13 @@ footer {
 }
 
 a:link {
-  color: white;
+  color: rgb(255, 229, 79);
 }
 
 a:visited {
-  color: rgb(213, 236, 255);
+  color: rgb(133, 200, 255);
+}
+
+a:hover {
+  text-shadow: 1px 1px 3px white;
 }

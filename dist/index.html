@@ -12,15 +12,42 @@
     <div class="content">
       <p class="rules">
         This is a hidden objects game. Here is a collage with pictures. The goal
-        is to find these images: squirrel, cinnamon, snake, laptop and Statue of
-        Liberty. Good luck!!!
+        is to find these images: <span class="squirrel">squirrel</span>,
+        <span class="cinnamon">cinnamon</span>,
+        <span class="snake">snake</span>, <span class="laptop">laptop</span> and
+        <span class="statue">the Statue of Liberty </span>. If you pick
+        correctly, the marker will apear on the image.<br />
+        Good luck!!!
       </p>
       <div class="game-container">
         <div class="collage-container">
-          <img src="collage.jpg" alt="collage with things to find" />
+          <img
+            class="collage"
+            src="collage.jpg"
+            alt="collage with things to find"
+          />
+          <div class="win-pop-up-window">
+            <div class="win-pop-up">
+              <p class="win-message">Congratulations! You won.</p>
+              <p class="time">
+                You found all images in <span class="seconds"></span> seconds!
+              </p>
+              <form>
+                <label for="name"
+                  >Please, enter you name for our best scores board</label
+                >
+                <input type="text" id="name" />
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+              </form>
+            </div>
+          </div>
+          <div class="start-pop-up-window">
+            <button class="start-btn">Start the game!</button>
+          </div>
           <div class="box">
             <button class="squirrel-btn">Squirrel</button>
-            <button class="'statue-btn">Statue</button>
+            <button class="statue-btn">Statue</button>
             <button class="laptop-btn">Laptop</button>
             <button class="cinnamon-btn">Cinnamon</button>
             <button class="snake-btn">Snake</button>
@@ -29,11 +56,7 @@
         <div class="scoreboard-container">
           <div class="scoreboard">
             <h3>Best scores</h3>
-            <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ol>
+            <ol class="score-list"></ol>
           </div>
         </div>
       </div>
